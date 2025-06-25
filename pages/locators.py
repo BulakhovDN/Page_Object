@@ -33,3 +33,8 @@ class TheCost:
 class ProductPageLocators:
     SUCCESS_MESSAGE = (By.XPATH, "//body/div[contains(@class,'container-fluid page')]/\
     div[contains(@class,'page_inner')]/div[@id='messages']/div[1]")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
