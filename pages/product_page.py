@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
-from pages.locators import BasketPageLocators, BookWasAddedToBasket, NameBook, TheCostOfTheBasketIsNowField, TheCost
+from pages.locators import BasketPageLocators, BookWasAddedToBasket, NameBook, TheCostOfTheBasketIsNowField, TheCost, \
+    ProductPageLocators
 
 
 class ProductPage(BasePage):
@@ -19,3 +20,10 @@ class ProductPage(BasePage):
         cost = book_cost.text
         assert cost in text_element, "Different cost"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is not disappear, it is right"

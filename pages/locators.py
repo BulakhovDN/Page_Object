@@ -28,3 +28,8 @@ class TheCostOfTheBasketIsNowField:
 
 class TheCost:
     COST = (By.CSS_SELECTOR, "div[class='col-sm-6 product_main'] p[class='price_color']")
+
+
+class ProductPageLocators:
+    SUCCESS_MESSAGE = (By.XPATH, "//body/div[contains(@class,'container-fluid page')]/\
+    div[contains(@class,'page_inner')]/div[@id='messages']/div[1]")
