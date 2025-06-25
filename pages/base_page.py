@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from pages.locators import BasePageLocators
+from pages.locators import BasePageLocators, BasketPageLocatorsOnProductPage, BasketPageLocators
 
 
 class BasePage:
@@ -61,3 +61,7 @@ class BasePage:
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def go_to_basket(self):
+        link = self.browser.find_element(*BasketPageLocators.BASKET_BUTTON)
+        link.click()

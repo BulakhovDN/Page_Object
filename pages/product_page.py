@@ -1,11 +1,11 @@
 from pages.base_page import BasePage
-from pages.locators import BasketPageLocators, BookWasAddedToBasket, NameBook, TheCostOfTheBasketIsNowField, TheCost, \
+from pages.locators import BasketPageLocatorsOnProductPage, BookWasAddedToBasket, NameBook, TheCostOfTheBasketIsNowField, TheCost, \
     ProductPageLocators
 
 
 class ProductPage(BasePage):
     def add_to_basket(self):
-        button = self.browser.find_element(*BasketPageLocators.BASKET_BUTTON)
+        button = self.browser.find_element(*BasketPageLocatorsOnProductPage.BASKET_BUTTON)
         button.click()
 
     def check_that_book_was_added_to_basket(self):
