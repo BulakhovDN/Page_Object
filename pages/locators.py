@@ -49,6 +49,10 @@ class ItemsInBasket:
     MESSAGE = (By.CSS_SELECTOR, ".col-sm-6.h3")
 
 
+class MessageAboutBasketIsEmpty:
+    MESSAGE = (By.CSS_SELECTOR, "#content_inner > p")
+
+
 class Register:
     EMAIL = (By.CSS_SELECTOR, "#id_registration-email")
     PASSWORD1 = (By.CSS_SELECTOR, "#id_registration-password1")
